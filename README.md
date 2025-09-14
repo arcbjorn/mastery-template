@@ -10,15 +10,29 @@ Gamified practice system that makes the work itself the dopamine loop. No extern
 
 ## Setup Options
 ```bash
-# From GitHub template
-gh repo create new-project --template your-username/mastery
+# From GitHub template (recommended)
+gh repo create mastery --template arcbjorn/mastery
 
-# Using degit
-npx degit your-username/mastery new-project
+# Fork for ongoing updates (recommended)
+gh repo fork arcbjorn/mastery mastery
+```
+
+<details>
+<summary>Alternative setup methods</summary>
+
+```bash
+# Using degit (needs npm globally)
+npx degit arcbjorn/mastery mastery
 
 # Traditional clone
 git clone <repo-url> && cd mastery
+
+# Sync template changes to existing project
+git remote add template https://github.com/arcbjorn/mastery
+git fetch template
+git merge template/master
 ```
+</details>
 
 ## Quick Start
 ```bash
@@ -105,14 +119,3 @@ Data: messages(id, user, text, timestamp)
 **Post**: Fist pump/"YES" → 60s retro → set next hook → log trophy
 
 Ready to start crushing problems? Say **"start a session leetcode"** to begin!
-
-## Template Updates
-```bash
-# Sync template changes to existing project
-git remote add template https://github.com/your-username/mastery
-git fetch template
-git merge template/master
-
-# Alternative: Fork for ongoing updates
-gh repo fork your-username/mastery new-project
-```
