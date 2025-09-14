@@ -105,3 +105,14 @@ Data: messages(id, user, text, timestamp)
 **Post**: Fist pump/"YES" → 60s retro → set next hook → log trophy
 
 Ready to start crushing problems? Say **"start a session leetcode"** to begin!
+
+## Template Updates
+```bash
+# Sync template changes to existing project
+git remote add template https://github.com/your-username/mastery
+git fetch template
+git merge template/master
+
+# Alternative: Fork for ongoing updates
+gh repo fork your-username/mastery new-project
+```
