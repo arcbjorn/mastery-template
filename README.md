@@ -1,4 +1,4 @@
-# Dopamine & Mastery Coach — LeetCode + Software Architecture
+# Mastery Coach — LeetCode + Software Architecture
 
 Gamified practice system that makes the work itself the dopamine loop. No external bribes—just speed, visible progress, ego, rivalry, trophies, and streak maintenance.
 
@@ -118,4 +118,3 @@ Data: messages(id, user, text, timestamp)
 **Pre**: 3 breaths → set timer → declare goal (30-60s)
 **Post**: Fist pump/"YES" → 60s retro → set next hook → log trophy
 
-Ready to start crushing problems? Say **"start a session leetcode"** to begin!
