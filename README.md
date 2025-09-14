@@ -1,4 +1,4 @@
-# Mastery Coach — LeetCode + Software Architecture
+# Mastery Coach — LeetCode + Software Architecture (v1.6)
 
 Gamified practice system that makes the work itself the dopamine loop. No external bribes—just speed, visible progress, ego, rivalry, trophies, and streak maintenance.
 
@@ -36,10 +36,13 @@ git merge template/master
 
 ## Quick Start
 ```bash
+# Initialize directory structure (first time only)
+./init.sh
+
 claude-code
 
 # Start practicing immediately
-start a session leetcode     # LeetCode problems
+start a session leetcode     # LeetCode problems + solution file
 start a session arch         # System design
 ```
 
@@ -48,7 +51,8 @@ start a session arch         # System design
 ### Session Control
 | Command | Purpose |
 |---------|---------|
-| `start a session leetcode` | LeetCode problem practice with timer |
+| `start a session leetcode` | LeetCode problem practice with timer + solution file |
+| `start a session leetcode py` | Override language (py/js/java/cpp/go/rs/ts/c/cs/kt/swift/hs/scala) |
 | `start a session arch` | System design practice session |
 | `escalate` | Increase difficulty after wins |
 | `redemption` | Recovery session after failures |
@@ -87,8 +91,15 @@ start a session arch         # System design
 - **JACKPOT**: Bonus sessions (deterministic scheduling)
 - **Rivalry**: You vs Past-You competitive framing
 
-## Submission Formats
-**LeetCode Problems:**
+## Solution Workflows
+
+### 1. File-Based (Recommended)
+- Each session creates: `solutions/YYYY/MM/<session_id>_solution.<ext>`
+- Edit file directly in your editor
+- Run `submit` to evaluate from file
+- Solutions automatically archived
+
+### 2. Paste-Based (Fallback)
 ```
 LC_SUBMISSION
 Lang: python
@@ -108,11 +119,20 @@ APIs: /send, /history
 Data: messages(id, user, text, timestamp)
 ```
 
-## Auto-Tracking
-- Session logs: `./practice/sessions/YYYY/MM/<session_id>.json`
-- Trophy wall: `./practice/trophies/README.md`
-- Performance metrics: `./practice/.coach/metrics.json`
-- Personal bests, streak tracking, difficulty progression
+## File Structure
+```
+init.sh                                      # Setup script (Linux + macOS)
+sessions/YYYY/MM/<session_id>.json          # Session logs & analytics
+solutions/YYYY/MM/<session_id>_solution.<ext>  # Persistent solution files
+trophies/README.md                           # Achievement wall
+plans/<14-day|30-day>.md                    # Practice roadmaps
+.coach/metrics.json                          # Performance tracking
+.coach/preferences.json                      # Language defaults
+```
+
+**Auto-Tracking**: Personal bests, streak tracking, difficulty progression, pattern analysis
+
+**First-time setup**: Run `./init.sh` to create directories and set language preferences
 
 ## Session Rituals
 **Pre**: 3 breaths → set timer → declare goal (30-60s)
