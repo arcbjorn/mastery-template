@@ -1,32 +1,98 @@
-# Mastery Coach
+# Dopamine & Mastery Coach — LeetCode + Software Architecture
 
-Dopamine-driven LeetCode + Architecture practice system.
+Gamified practice system that makes the work itself the dopamine loop. No external bribes—just speed, visible progress, ego, rivalry, trophies, and streak maintenance.
 
-## Commands
-
-| Command | Purpose |
-|---------|---------|
-| `start a session leetcode` | Begin LC session with timer + script |
-| `start a session arch` | Begin architecture session |
-| `hint 1-3` | Progressive hints (nudge → strategy → pseudocode) |
-| `submit` | Evaluate solution attempt |
-| `review` | Performance analytics + weak patterns |
-| `streak` | Current streak status + motivation |
-| `plan 14` | 14-day training plan |
-| `escalate` | Harder variant after wins |
-| `redemption` | Recovery session after losses |
-| `momentum` | Energy check + micro-adjustment |
+## Core Modes
+- **SESSION**: Focused practice with timers, goals, and micro-lessons
+- **REVIEW**: Performance analytics and weak pattern identification
+- **PLAN**: Structured 14-day or 30-day practice roadmaps
+- **ESCALATE/REDEMPTION**: Adaptive difficulty based on performance
 
 ## Quick Start
 ```bash
-# Start practicing
-start a session leetcode
+# Clone and enter
+git clone <repo-url>
+cd mastery
+claude-code
 
-# Get unstuck
-hint 1
-
-# Check progress
-review
+# Start practicing immediately
+start a session leetcode     # LeetCode problems
+start a session arch         # System design
 ```
 
-Practice data stored in `./practice/` with automatic streak tracking and PB detection.
+## All Commands
+
+### Session Control
+| Command | Purpose |
+|---------|---------|
+| `start a session leetcode` | LeetCode problem practice with timer |
+| `start a session arch` | System design practice session |
+| `escalate` | Increase difficulty after wins |
+| `redemption` | Recovery session after failures |
+
+### Live Coaching (During Sessions)
+| Command | Purpose |
+|---------|---------|
+| `hint 1`, `hint 2`, `hint 3` | Progressive hint ladder |
+| `nudge`, `blocked`, `struggling` | Get unstuck instantly |
+| `momentum` | Energy/focus assessment |
+| `submit` | Evaluate your solution |
+| `rate` | Detailed scoring breakdown |
+
+### Analytics & Planning
+| Command | Purpose |
+|---------|---------|
+| `review` | Full performance dashboard |
+| `streak` | Current streak + motivation boost |
+| `plan 14` | 2-week structured roadmap |
+| `plan 30` | Monthly practice plan |
+| `debug session` | Analyze performance drops |
+
+### Learning Tools
+| Command | Purpose |
+|---------|---------|
+| `teach pack` | Deep explanations post-session |
+| `pattern drill <tag>` | Focused practice on weak areas |
+| `log only` | Raw performance data output |
+| `overview` | Complete functionality guide |
+
+## Game Mechanics
+- **Speedruns**: Beat personal bests with timer pressure
+- **Streaks**: Consecutive wins trigger auto-escalation
+- **Trophies**: Achievement collection and celebration
+- **Boss Fights**: Capstone challenges every 5th session
+- **JACKPOT**: Bonus sessions (deterministic scheduling)
+- **Rivalry**: You vs Past-You competitive framing
+
+## Submission Formats
+**LeetCode Problems:**
+```
+LC_SUBMISSION
+Lang: python
+Problem: LC-1 Two Sum
+Code:
+def twoSum(nums, target):
+    # your solution
+```
+
+**Architecture Designs:**
+```
+ARCH_SUBMISSION
+Title: Chat System
+Constraints: 10M users, <100ms latency
+Design: • WebSocket connections • Redis pub/sub
+APIs: /send, /history
+Data: messages(id, user, text, timestamp)
+```
+
+## Auto-Tracking
+- Session logs: `./practice/sessions/YYYY/MM/<session_id>.json`
+- Trophy wall: `./practice/trophies/README.md`
+- Performance metrics: `./practice/.coach/metrics.json`
+- Personal bests, streak tracking, difficulty progression
+
+## Session Rituals
+**Pre**: 3 breaths → set timer → declare goal (30-60s)
+**Post**: Fist pump/"YES" → 60s retro → set next hook → log trophy
+
+Ready to start crushing problems? Say **"start a session leetcode"** to begin!
