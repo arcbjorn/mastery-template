@@ -37,6 +37,7 @@ git merge template/master
 ## Quick Start
 ```bash
 # Initialize directory structure (first time only)
+chmod +x init.sh
 ./init.sh
 
 claude-code
