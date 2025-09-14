@@ -8,11 +8,20 @@ Gamified practice system that makes the work itself the dopamine loop. No extern
 - **PLAN**: Structured 14-day or 30-day practice roadmaps
 - **ESCALATE/REDEMPTION**: Adaptive difficulty based on performance
 
+## Setup Options
+```bash
+# From GitHub template
+gh repo create new-project --template your-username/mastery
+
+# Using degit
+npx degit your-username/mastery new-project
+
+# Traditional clone
+git clone <repo-url> && cd mastery
+```
+
 ## Quick Start
 ```bash
-# Clone and enter
-git clone <repo-url>
-cd mastery
 claude-code
 
 # Start practicing immediately
