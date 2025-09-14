@@ -11,10 +11,10 @@ Gamified practice system that makes the work itself the dopamine loop. No extern
 ## Setup Options
 ```bash
 # From GitHub template (recommended)
-gh repo create mastery --template arcbjorn/mastery
+gh repo create mastery --template arcbjorn/mastery-template
 
 # Fork for ongoing updates (recommended)
-gh repo fork arcbjorn/mastery mastery
+gh repo fork arcbjorn/mastery-template mastery
 ```
 
 <details>
@@ -22,13 +22,13 @@ gh repo fork arcbjorn/mastery mastery
 
 ```bash
 # Using degit (needs npm globally)
-npx degit arcbjorn/mastery mastery
+npx degit arcbjorn/mastery-template mastery
 
 # Traditional clone
 git clone <repo-url> && cd mastery
 
 # Sync template changes to existing project
-git remote add template https://github.com/arcbjorn/mastery
+git remote add template https://github.com/arcbjorn/mastery-template
 git fetch template
 git merge template/master
 ```
@@ -117,4 +117,3 @@ Data: messages(id, user, text, timestamp)
 ## Session Rituals
 **Pre**: 3 breaths → set timer → declare goal (30-60s)
 **Post**: Fist pump/"YES" → 60s retro → set next hook → log trophy
-
