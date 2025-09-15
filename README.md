@@ -31,9 +31,6 @@ git clone <repo-url> && cd mastery
 git remote add template https://github.com/arcbjorn/mastery-template
 git fetch template
 git merge template/master
-
-# Sync local changes back to template (maintainers only)
-./sync-template.sh "your commit message"
 ```
 </details>
 
@@ -46,8 +43,8 @@ chmod +x init.sh
 claude-code
 
 # Start practicing immediately
-start a session leetcode     # LeetCode problems + solution file
-start a session arch         # System design
+/session leetcode     # LeetCode problems + solution file
+/session arch         # System design
 ```
 
 ## All Commands
@@ -55,37 +52,37 @@ start a session arch         # System design
 ### Session Control
 | Command | Purpose |
 |---------|---------|
-| `start a session leetcode` | LeetCode problem practice with timer + solution file |
-| `start a session leetcode py` | Override language (py/js/java/cpp/go/rs/ts/c/cs/kt/swift/hs/scala) |
-| `start a session arch` | System design practice session |
-| `escalate` | Increase difficulty after wins |
-| `redemption` | Recovery session after failures |
+| `/session leetcode` | LeetCode problem practice with timer + solution file |
+| `/session leetcode py` | Override language (py/js/java/cpp/go/rs/ts/c/cs/kt/swift/hs/scala) |
+| `/session arch` | System design practice session |
+| `/escalate` | Increase difficulty after wins |
+| `/redemption` | Recovery session after failures |
 
 ### Live Coaching (During Sessions)
 | Command | Purpose |
 |---------|---------|
-| `hint 1`, `hint 2`, `hint 3` | Progressive hint ladder |
-| `nudge`, `blocked`, `struggling` | Get unstuck instantly |
-| `momentum` | Energy/focus assessment |
-| `submit` | Evaluate your solution |
-| `rate` | Detailed scoring breakdown |
+| `/hint 1`, `/hint 2`, `/hint 3` | Progressive hint ladder |
+| `/hint nudge`, `/hint blocked`, `/hint struggling` | Get unstuck instantly |
+| `/momentum` | Energy/focus assessment |
+| `/submit` | Evaluate your solution |
+| `/submit` then `rate` | Detailed scoring breakdown |
 
 ### Analytics & Planning
 | Command | Purpose |
 |---------|---------|
-| `review` | Full performance dashboard |
-| `streak` | Current streak + motivation boost |
-| `plan 14` | 2-week structured roadmap |
-| `plan 30` | Monthly practice plan |
-| `debug session` | Analyze performance drops |
+| `/review` | Full performance dashboard |
+| `/streak` | Current streak + motivation boost |
+| `/plan 14` | 2-week structured roadmap |
+| `/plan 30` | Monthly practice plan |
+| `/debug-session` | Analyze performance drops |
 
 ### Learning Tools
 | Command | Purpose |
 |---------|---------|
-| `teach pack` | Deep explanations post-session |
-| `pattern drill <tag>` | Focused practice on weak areas |
-| `log only` | Raw performance data output |
-| `overview` | Complete functionality guide |
+| `/teach-pack` | Deep explanations post-session |
+| `/pattern-drill <tag>` | Focused practice on weak areas |
+| `/log-only` | Raw performance data output |
+| `/overview` | Complete functionality guide |
 
 ## Game Mechanics
 - **Speedruns**: Beat personal bests with timer pressure
