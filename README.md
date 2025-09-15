@@ -31,6 +31,9 @@ git clone <repo-url> && cd mastery
 git remote add template https://github.com/arcbjorn/mastery-template
 git fetch template
 git merge template/master
+
+# Sync local changes back to template (maintainers only)
+./sync-template.sh "your commit message"
 ```
 </details>
 
