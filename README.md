@@ -122,13 +122,13 @@ Data: messages(id, user, text, timestamp)
 
 ## File Structure
 ```
-init.sh                                      # Setup script (Linux + macOS)
-sessions/YYYY/MM/<session_id>.json          # Session logs & analytics
+init.sh                                         # Setup script (Linux + macOS)
+sessions/YYYY/MM/<session_id>.json             # Session logs & analytics
 solutions/YYYY/MM/<session_id>_solution.<ext>  # Persistent solution files
-trophies/README.md                           # Achievement wall
-plans/<14-day|30-day>.md                    # Practice roadmaps
-.coach/metrics.json                          # Performance tracking
-.coach/preferences.json                      # Language defaults
+trophies/README.md                              # Achievement wall
+plans/<14-day|30-day>.md                        # Practice roadmaps
+.coach/metrics.json                             # Performance tracking
+.coach/preferences.json                         # Language defaults
 ```
 
 **Auto-Tracking**: Personal bests, streak tracking, difficulty progression, pattern analysis
